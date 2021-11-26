@@ -2,11 +2,11 @@
 float X, Y, Z;
 
 
-#include <FastLED.h>         //ws2812灯带头文件
-#define LED_PIN1    A6       //灯带接2号IO口
-#define NUM_LEDS1   143       //灯带数量12
+#include <FastLED.h>       
+#define LED_PIN1    A6      
+#define NUM_LEDS1   143    
 CRGB leds1[NUM_LEDS1];     
-uint8_t max_bright=255;      //亮度100（0-255可调）
+uint8_t max_bright=255;      
 
 static bool flag = false;
 void setup() 
@@ -35,7 +35,7 @@ void loop()
   {
       for(int x=255;x>=0;x--)
       {
-          for(int i=0;i<143;i++)      //灯带变色
+          for(int i=0;i<143;i++)  
           {
              leds1[i] = CRGB (x,0,0);
           }
@@ -50,7 +50,7 @@ void loop()
     {
       for(int x=0;x<=255;x++)
       {
-          for(int i=0;i<143;i++)      //灯带变色
+          for(int i=0;i<143;i++)     
           {
               leds1[i] = CRGB (x,0,0);
           }
